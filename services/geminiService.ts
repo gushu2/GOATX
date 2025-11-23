@@ -17,7 +17,7 @@ export const enhanceNote = async (text: string): Promise<string> => {
     });
     return response.text || text;
   } catch (error) {
-    console.error("Gemini Enhance Error:", error);
+    console.error("Enhancement Service Error:", error);
     throw error;
   }
 };
@@ -32,7 +32,7 @@ export const summarizeVault = async (notes: string[]): Promise<string> => {
     });
     return response.text || "Could not generate summary.";
   } catch (error) {
-    console.error("Gemini Summary Error:", error);
+    console.error("Summary Service Error:", error);
     return "AI Service currently unavailable.";
   }
 };
@@ -48,7 +48,7 @@ export const suggestTags = async (text: string): Promise<string[]> => {
     const rawText = response.text || "";
     return rawText.split(',').map(tag => tag.trim()).filter(t => t.length > 0);
   } catch (error) {
-    console.error("Gemini Tag Error:", error);
+    console.error("Tag Generation Error:", error);
     return [];
   }
 };

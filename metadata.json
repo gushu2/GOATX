@@ -1,5 +1,5 @@
 {
-  "name": "Copy of RV Notes",
-  "description": "A secure, minimalist note-taking vault accessible via a unique 3-digit code. Features AI-powered note enhancement and summarization.",
+  "name": "RV Notes",
+  "description": "A secure, minimalist note-taking vault accessible via a unique 3-digit code.",
   "requestFramePermissions": []
 }
